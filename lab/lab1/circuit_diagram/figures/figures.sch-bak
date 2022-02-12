@@ -1,0 +1,64 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:Battery 5V
+U 1 1 61F8C288
+P 3300 3200
+F 0 "5V" H 3100 3300 50  0000 L CNN
+F 1 "Bench Power Supply" H 2400 3100 50  0000 L CNN
+F 2 "" V 3300 3260 50  0001 C CNN
+F 3 "~" V 3300 3260 50  0001 C CNN
+	1    3300 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 3000 3300 2850
+Wire Wire Line
+	3300 2850 3750 2850
+$Comp
+L Device:R_Small_US R
+U 1 1 61F8E2B0
+P 3850 2850
+F 0 "R" V 3750 2850 50  0000 C CNN
+F 1 " " V 3736 2850 50  0000 C CNN
+F 2 "" H 3850 2850 50  0001 C CNN
+F 3 "~" H 3850 2850 50  0001 C CNN
+	1    3850 2850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3950 2850 4450 2850
+Wire Wire Line
+	4450 2850 4450 3550
+Wire Wire Line
+	3300 3550 3300 3400
+Wire Wire Line
+	4450 3550 3850 3550
+$Comp
+L power:GNDREF #PWR?
+U 1 1 61F91901
+P 3850 3550
+F 0 "#PWR?" H 3850 3300 50  0001 C CNN
+F 1 "GNDREF" H 3855 3377 50  0000 C CNN
+F 2 "" H 3850 3550 50  0001 C CNN
+F 3 "" H 3850 3550 50  0001 C CNN
+	1    3850 3550
+	1    0    0    -1  
+$EndComp
+Connection ~ 3850 3550
+Wire Wire Line
+	3850 3550 3300 3550
+$EndSCHEMATC

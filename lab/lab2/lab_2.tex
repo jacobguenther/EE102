@@ -1,0 +1,98 @@
+\documentclass{article}
+\usepackage{caption}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage{geometry}
+\usepackage{scrextend}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage{float}
+
+\title{EE102 Homework 2}
+\author{Jacob Guenther}
+
+\geometry{
+	a4paper,
+	total={170mm,257mm},
+	left=20mm,
+	top=20mm,
+}
+
+\begin{document}
+
+\includepdf[pages=1,pagecommand={}]{Lab_2_cover.pdf}
+
+\section{Objective}
+The goal of this lab is to gain more experience using a multimeter while exploring some of the properties of a linear voltage regulator. In it we use a multimeter to measure node and differential voltage. Then we break the circuit to measure current. Finally we compare our measured results to a simulation of the circuit.
+
+\section{Equipment}
+\begin{itemize}
+	\item Agilent 34410A Multimeter
+	\item Agilent E354xA Dual Output Power Supply
+	\item Prototyping Board
+	\item Linear Voltage Regulator
+	\item Resistors
+	\item Capacitor
+	\item Jumpers
+\end{itemize}
+
+\section{Setup}
+The circuit used in this lab is shown in figure 1.
+
+\section{Observations and Results}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{ | X | X | X | X | X | X | }
+	\hline
+	\textbf{Node Voltage $\text{V}_A$} &
+	\textbf{Node Voltage $\text{V}_B$} &
+	\textbf{Differential Voltage $\text{V}_{AB}$} &
+	\textbf{Current Through 1 k$\Omega$} &
+	\textbf{Differential Voltage Calculated $\text{V}_A-\text{V}_B$} &
+	\textbf{Calculated Resistance} \\
+	\hline
+	1.5 & 0.00020238 & & & & \\
+	2.0 & 0.669      & & & & \\
+	2.5 & 1.189      & & & & \\
+	3.0 & 1.611      & & & & \\
+	3.5 & 2.096      & & & & \\
+	4.0 & 2.583      & & & & \\
+	4.5 & 3.072      & & & & \\
+	5.0 & 3.563      & & & & \\
+	5.5 & 4.0563     & & & & \\
+	6.0 & 4.53       & & & & \\
+	6.5 & 4.924      & & & & \\
+	7.0 & 5.067      & & & & \\
+	7.5 & 5.069      & & & & \\
+	8.0 & 5.07       & & & & \\
+	8.5 & 5.066      & & & & \\
+	9.0 & 5.069      & & & & \\
+	\hline
+\end{tabularx}
+\caption{\label{tab:table-name}Displays the measured node and differential voltages, and current, as well as calculated differential voltage and resistance.}
+\end{table}
+
+\newpage
+\section{Conclusion}
+
+
+\subsection{Sources of Error}
+
+\begin{itemize}
+	\item 
+\end{itemize}
+
+
+\newpage
+\section{References}
+\noindent
+[1] Denise Thorsen, Maher Al-Badri, INTRODUCTION TO ELECTRICAL AND COMPUTER ENGINEERING, University of Alaska Fairbanks, 2022.
+\newline
+\newline
+\noindent
+
+\end{document}
