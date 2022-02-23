@@ -1,8 +1,8 @@
+build/*
 *.aux
 *.log
 *.out
 *.gz
 *.xcf
 .xdp*
-
-
+lab*.pdf
