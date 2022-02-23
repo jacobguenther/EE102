@@ -1,0 +1,147 @@
+* PSpice Model Editor - Version 9.2
+
+*$
+* CA3046 NPN model
+* created using Parts release 6.3a on 02/03/97 at 15:57
+* Parts is a MicroSim product.
+.MODEL CA3046 NPN
++ IS=10.000E-15
++ BF=145.76
++ VAF=100
++ IKF=46.747E-3
++ ISE=114.23E-15
++ NE=1.4830
++ BR=.1001
++ VAR=100
++ IKR=10.010E-3
++ ISC=10.000E-15
++ RC=10
++ CJE=1.0260E-12
++ MJE=.33333
++ CJC=991.79E-15
++ MJC=.33333
++ TF=277.09E-12
++ XTF=309.38
++ VTF=16.364
++ ITF=1.7597
++ TR=10.000E-9
+*$
+*$
+*78L05 MCE 7-12-95
+*78L05 circuit taken from Signetics 1977 Analog Data Book page 160
+*5V 100mA Voltage Regulator pkg:TO-92 1,2,3
+.SUBCKT 78L05 1 2 3
+Q1 5 5 1 QPNP
+Q2 10 5 1 QPNP
+Q3 1 11 12 QNPN
+Q4 1 10 11 QNPN
+Q5 10 13 14 QNPN
+Q6 1 4 20 QNPN
+Q7 10 19 21 QNPN
+Q8 9 9 2 QNPN
+Q9 18 9 22 QNPN OFF
+Q10 8 18 2 QNPN
+Q11 5 7 17 QNPN
+Q12 5 16 17 QNPN
+Q13 10 15 17 QNPN
+C1 15 10 20E-12
+D1 2 4 DZ5V
+Q14 2 8 7 QPNP
+R17 2 17 4E3
+R16 4 1 20E3
+R15 16 20 4E3
+R14 19 16 700
+R13 2 19 300
+R12 2 21 100
+R11 9 7 1E3
+R10 18 7 10E3
+R9 7 3 2.2E3
+R8 2 22 1E3
+R7 8 7 2E3
+R6 2 15 1.4E3
+R5 15 3 4.5E3
+R4 3 14 100
+R3 3 12 2
+R2 13 11 500
+R1 13 12 200
+
+.MODEL QPNP PNP(IS=1.05E-15 BF=220 VAF=240 IKF=0.1 ISE=1.003E-9
++ NE=4 ISC=1.003E-9 NC=4 RB=3 RE=0.5 RC=0.2 CJE=5.7E-12 VJE=0.75 TF=3.35E-10
++ CJC=4.32E-12 VJC=0.75 TR=1.7E-7 VJS=0.75 KF=4E-15 )
+
+.MODEL QNPN NPN(IS=8.11E-14 BF=205 VAF=113 IKF=0.5 ISE=1.06E-11
++ NE=2 BR=4 VAR=24 IKR=0.225 RB=1.37 RE=0.343 RC=0.137 CJE=2.95E-11
++ TF=3.97E-10 CJC=1.52E-11 TR=8.5E-8 XTB=1.5 )
+
+.MODEL DZ5V D(IS=1E-11 RS=7.708 N=1.27 TT=5E-8 CJO=4.068E-10 VJ=0.75
++ M=0.33 BV=4.946 IBV=0.01 )
+.ENDS 78L05
+
+
+
+*$
+* A-G-K: 1-2-3
+.SUBCKT 2N6394 10 30 20 
+* 10--A, 30--G, 20--K
+.MODEL DGAT D (IS=1.0e-12 N=1 RS=0.001)
+.MODEL DMOD D (IS=1.0e-12 N=0.001)
+.MODEL DON D (IS=1.000e-012 N=1.000e+000 RS=3.759e-002 BV=6.000e+001)
+.MODEL DBREAK D (IS=1.000e-012 N=8.574e+001 BV=6.000e+001)
+V1 10 14 DC 0
+DON1 14 222 DON
+VV 222 22 DC 0
+E1 22 20 poly(2) 10 20 3 20 0 0 0 0 1
+DBRK1 14 27 DBREAK
+DBRK2 20 27 DBREAK
+RLEAK 14 20 5.000e+006
+CRISE 14 20 1.200e-010
+FC1 3 20 poly(2) VGD  V1 -5.000e-003 1 8.333e-001
+CON 3 20 5.000e-009 IC=1.5
+DS1 3 31 DMOD
+DS2 20 3 DMOD
+VW 31 20 DC 1
+DGATE 30 7 DGAT
+VGD 7 20 DC 1.216e-001
+.ENDS
+*$
+* A-K: 1-2
+.MODEL 1N4733A D IS= 5.038e-012 RS= 0.001 CJO= 1e-012 VJ= 0.75
++                TT= 5e-009 M= 0.3333 BV= 5.111 IBV= 0.07542 N= 1
++                EG= 1.11 XTI= 3 KF= 0 AF= 1 FC= 0.5
++                TNOM= 27
+*$
+*A-K: 1-2
+.MODEL D1N4001GP D (
++   IS =  6.698e-07
++   RS =  0.04255
++   CJO =  1.949e-11
++   VJ =  0.3905
++   TT =  4.933e-06
++   M =  0.3576
++   BV =  50
++   N =  2.412
++   EG =  1.11
++   XTI =  3
++   KF =  0
++   AF =  1
++   FC =  0.5
++   IBV =  0.005177
++   TNOM =  27
++ )
+*$
+* CD4007 pMOS
+.model CD4007P    PMOS (Level=1 Gamma= 0 Xj=0
++		Tox=1200n Phi=.6 Rs=0 Kp=55u Vto=-1.5 Lambda=0.04
++		Rd=0 Cbd=4.0p Cbs=4.0p Pb=.8 Cgso=0.2p
++		Cgdo=0.2p Is=16.64p N=1)
+*The default W and L is 60 and 10 um respectively and AD and AS
+*should not be included.
+*$
+* CD4007 nMOS
+.model CD4007N    NMOS (Level=1 Gamma= 0 Xj=0
++		Tox=1200n Phi=.6 Rs=0 Kp=111u Vto=2.0 Lambda=0.01
++		Rd=0 Cbd=2.0p Cbs=2.0p Pb=.8 Cgso=0.1p
++		Cgdo=0.1p Is=16.64p N=1)
+*The default W and L is 30 and 10 um respectively and AD and AS
+*should not be included.
+*$

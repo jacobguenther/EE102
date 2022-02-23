@@ -1,0 +1,177 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Module:Arduino_Nano_v3.x A1
+U 1 1 621408A1
+P 5225 4400
+F 0 "A1" H 5225 5525 50  0000 C CNN
+F 1 "Arduino_Nano" H 5225 5650 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 5225 4400 50  0001 C CIN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 5225 4400 50  0001 C CNN
+	1    5225 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R1
+U 1 1 621412A4
+P 6275 3975
+F 0 "R1" H 6343 4021 50  0000 L CNN
+F 1 "680" H 6343 3930 50  0000 L CNN
+F 2 "" V 6315 3965 50  0001 C CNN
+F 3 "~" H 6275 3975 50  0001 C CNN
+	1    6275 3975
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Thermistor_US TH1
+U 1 1 62141F60
+P 6275 4800
+F 0 "TH1" H 6378 4846 50  0000 L CNN
+F 1 "Thermistor" H 6378 4755 50  0000 L CNN
+F 2 "" H 6275 4800 50  0001 C CNN
+F 3 "~" H 6275 4800 50  0001 C CNN
+	1    6275 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR?
+U 1 1 62142A40
+P 6275 5225
+F 0 "#PWR?" H 6275 4975 50  0001 C CNN
+F 1 "GNDREF" H 6280 5052 50  0000 C CNN
+F 2 "" H 6275 5225 50  0001 C CNN
+F 3 "" H 6275 5225 50  0001 C CNN
+	1    6275 5225
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6275 4950 6275 5225
+Wire Wire Line
+	6275 4650 6275 4400
+Wire Wire Line
+	5725 4400 6275 4400
+Connection ~ 6275 4400
+Wire Wire Line
+	6275 4400 6275 4125
+Wire Wire Line
+	5425 3400 5425 3300
+Wire Wire Line
+	5425 3300 6275 3300
+Wire Wire Line
+	6275 3300 6275 3825
+Wire Wire Line
+	5225 5400 5225 5575
+Wire Wire Line
+	5325 5575 5325 5400
+$Comp
+L Device:LED D1
+U 1 1 62145FEE
+P 4300 3900
+F 0 "D1" H 4200 4000 50  0000 C CNN
+F 1 "RED" H 4375 4000 50  0000 C CNN
+F 2 "" H 4300 3900 50  0001 C CNN
+F 3 "~" H 4300 3900 50  0001 C CNN
+	1    4300 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R2
+U 1 1 62146AE8
+P 3775 3900
+F 0 "R2" V 3675 3825 50  0000 C CNN
+F 1 "680" V 3675 4000 50  0000 C CNN
+F 2 "" V 3815 3890 50  0001 C CNN
+F 3 "~" H 3775 3900 50  0001 C CNN
+	1    3775 3900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4725 4000 4575 4000
+Wire Wire Line
+	4575 4000 4575 3900
+Wire Wire Line
+	4575 3900 4450 3900
+Wire Wire Line
+	4150 3900 3925 3900
+Wire Wire Line
+	4725 4100 4575 4100
+Wire Wire Line
+	4575 4100 4575 4200
+$Comp
+L Device:LED D2
+U 1 1 6214B7A4
+P 4300 4200
+F 0 "D2" H 4200 4300 50  0000 C CNN
+F 1 "GREEN" H 4425 4300 50  0000 C CNN
+F 2 "" H 4300 4200 50  0001 C CNN
+F 3 "~" H 4300 4200 50  0001 C CNN
+	1    4300 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R3
+U 1 1 6214B7AA
+P 3775 4200
+F 0 "R3" V 3675 4125 50  0000 C CNN
+F 1 "680" V 3675 4300 50  0000 C CNN
+F 2 "" V 3815 4190 50  0001 C CNN
+F 3 "~" H 3775 4200 50  0001 C CNN
+	1    3775 4200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4575 4200 4450 4200
+Wire Wire Line
+	4150 4200 3925 4200
+Connection ~ 5275 5575
+Wire Wire Line
+	5275 5575 5325 5575
+Wire Wire Line
+	5225 5575 5275 5575
+$Comp
+L power:GNDREF #PWR?
+U 1 1 6214497A
+P 5275 5700
+F 0 "#PWR?" H 5275 5450 50  0001 C CNN
+F 1 "GNDREF" H 5280 5527 50  0000 C CNN
+F 2 "" H 5275 5700 50  0001 C CNN
+F 3 "" H 5275 5700 50  0001 C CNN
+	1    5275 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5275 5575 5275 5700
+$Comp
+L power:GNDREF #PWR?
+U 1 1 62151791
+P 3450 4475
+F 0 "#PWR?" H 3450 4225 50  0001 C CNN
+F 1 "GNDREF" H 3455 4302 50  0000 C CNN
+F 2 "" H 3450 4475 50  0001 C CNN
+F 3 "" H 3450 4475 50  0001 C CNN
+	1    3450 4475
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 3900 3450 4200
+Wire Wire Line
+	3625 4200 3450 4200
+Connection ~ 3450 4200
+Wire Wire Line
+	3450 4200 3450 4475
+Wire Wire Line
+	3625 3900 3450 3900
+$EndSCHEMATC

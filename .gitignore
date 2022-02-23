@@ -3,10 +3,6 @@
 *.out
 *.gz
 *.xcf
-EE F102 *
-EE102_SPRING-*
-EE_Spring-*
-EE-102-Spring-*
-EE-102-2022-*
-EE-102-TEXT-*
-EE102-SPRING-2022-Quiz-2-Online.pdf
+.xdp*
+
+

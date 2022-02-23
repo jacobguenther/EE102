@@ -1,0 +1,20 @@
+** Profile: "SCHEMATIC1-Lab2_profile"  [ D:\Users\jrguenther2\Documents\EE102_Project\VoltageRegulator-PSpiceFiles\SCHEMATIC1\Lab2_profile.sim ] 
+
+** Creating circuit file "Lab2_profile.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../elab.lib" 
+* From [PSPICE NETLIST] section of D:\Users\jrguenther2\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V_V1 0 9 0.1 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END
